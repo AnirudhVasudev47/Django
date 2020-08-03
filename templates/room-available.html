@@ -1,0 +1,118 @@
+{% extends 'template.html' %}
+
+{% block content %}
+
+{% load static %}
+<section class="ftco-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+          	<div class="row">
+          		<div class="col-md-12 ftco-animate">
+          			<div class="single-slider owl-carousel">
+          				<div class="item">
+          					<div class="room-img" style="background-image: url({{room_img.url}});"></div>
+          				</div>
+          				<div class="item">
+          					<div class="room-img" style="background-image: url({% static 'images/room-5.jpg' %});"></div>
+          				</div>
+          				<div class="item">
+          					<div class="room-img" style="background-image: url({% static 'images/room-6.jpg' %});"></div>
+          				</div>
+          			</div>
+          		</div>
+          		<div class="col-md-12 room-single mt-4 mb-5 ftco-animate">
+          			<h2 class="mb-4">{{room_type}} <span>- ({{total_available}} Available rooms)</span></h2>
+    				<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
+    				<div class="d-md-flex mt-5 mb-5">
+    					<ul class="list">
+	    					<li><span>Max:</span> {{person_per_room}} Persons</li>
+							<li><span>Check in:</span> {{check_in}}</li>
+	    				</ul>
+	    				<ul class="list ml-md-5">
+	    					<li><span>Bed:</span> {{no_of_bed}}</li>
+							<li><span>Check Out:</span> {{check_out}}</li>
+	    				</ul>
+						<ul class="list ml-md-5">
+	    					<li><span>Total Rooms:</span> {{total_rooms}}</li>
+	    				</ul>
+						<ul class="list ml-md-5">
+	    					<li><span>Price:</span> {{price}} <small> per night</small></li><br>
+	    				</ul>
+						
+    				</div>
+    				<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
+          		</div>
+				<form action="../book" class="booking-form aside-stretch" style="display:none" method='POST' id="book_room" >
+					{% csrf_token %}
+	        		<div class="row">
+	        			<div class="col-md d-flex py-md-4">
+	        				<div class="form-group align-self-stretch d-flex align-items-end">
+	        					<div class="wrap align-self-stretch py-3 px-4">
+				    					<label for="#">Check-in Date</label>
+				    					<input type="text" name="check_in" class="form-control checkin_date" value="{{check_in}}"placeholder="Check-in date">
+			    					</div>
+			    				</div>
+	        			</div>
+	        			<div class="col-md d-flex py-md-4">
+	        				<div class="form-group align-self-stretch d-flex align-items-end">
+	        					<div class="wrap align-self-stretch py-3 px-4">
+				    					<label for="#">Check-out Date</label>
+				    					<input type="text" name="check_out" class="form-control checkout_date" value="{{check_out}}" placeholder="Check-out date">
+			    					</div>
+			    				</div>
+	        			</div>
+						<input type="number" name="total_price" value="{{price}}">
+	        			<div class="col-md d-flex py-md-4">
+	        				<div class="form-group align-self-stretch d-flex align-items-end">
+	        					<div class="wrap align-self-stretch py-3 px-4">
+			      					<label for="#">Room</label>
+			      					<div class="form-field">
+			        					<div class="select-wrap">
+			                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+			                    <select name="room_type" id="" class="form-control" >
+								  <option value="{{room_type}}" selected>{{room_type}}</option>
+			                    </select>
+			                  </div>
+				              </div>
+				            </div>
+		                 </div>
+	        			</div>
+						<input type="text" name="username" value="{{user.username}}">
+	        			<div class="col-md d-flex py-md-4">
+	        				<div class="form-group align-self-stretch d-flex align-items-end">
+	        					<div class="wrap align-self-stretch py-3 px-4">
+			      					<label for="#">Guests</label>
+			      					<div class="form-field">
+			        					<div class="select-wrap">
+			                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+			                    <select name="no_of_guest" id="" class="form-control" value="{{no_of_guest}}">
+									<option value="{{no_of_guest}}" selected>{{no_of_guest}}</option>
+			                    </select>
+			                  </div>
+				              </div>
+				            </div>
+		              </div>
+	        			</div>
+	        			<div class="col-md d-flex">
+	        				<div class="form-group d-flex align-self-stretch">
+			              <button type="submit" form="book_room"class="btn btn-primary py-5 py-md-3 px-4 align-self-stretch d-block"><span>Check Availability <small>Best Price Guaranteed!</small></span></button>
+			            </div>
+	        			</div>
+	        		</div>
+	        	</form>
+	    		
+				<button class="pt-1 btn-custom px-3 py-2 rounded" style="border-radius:50px;color:green;" form="book_room">Book Room <span class="icon-long-arrow-right"></span></button>
+          		<div class="col-md-12 room-single ftco-animate mb-5 mt-4">
+          			<h3 class="mb-4">Take A Tour</h3>
+          			<div class="block-16">
+		              <figure>
+		                <img src="{% static 'images/room-4.jpg' %}" alt="Image placeholder" class="img-fluid">
+		                <a href="https://vimeo.com/45830194" class="play-button popup-vimeo"><span class="icon-play"></span></a>
+		              </figure>
+		            </div>
+          		</div>
+
+
+
+{% endblock content %}

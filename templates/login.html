@@ -1,0 +1,23 @@
+{% extends 'template.html' %}
+
+  {% block content %}
+    <form action="login" method="POST">
+        {% csrf_token %}
+      <h1>Login </h1>
+      <div class="formcontainer">
+      <hr/>
+      <div class="container">
+        <label for="uname"><strong>Username</strong></label><br>
+        <input type="text" placeholder="Enter Username" name="username" required><br>
+        <label for="psw"><strong>Password</strong></label><br>
+        <input type="password" placeholder="Enter Password" name="password" required><br>
+      </div><br>
+      <button type="submit" class="login-button">Login</button>
+    </form>
+    <div>
+        {% for message in messages %}
+        <h3>{{message}}</h3>
+        {% endfor %}
+    </div>
+{% endblock content %}
+
