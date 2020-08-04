@@ -28,4 +28,19 @@ ___
 
 ---
 
-The template for the website was taken from https://colorlib.com/wp/template/harbor-lights/
+## How to  
+1. <h4>Install python</h4>
+2. <h4>Create virtual environment</h4> 
+```
+mkvirtualenv <virtual environment name>
+```
+3. <h4>Redirect to the project directory and pass the following command</h4>
+```
+python manage.py runserver
+```
+4. <h4> Open your browser and goto the url http://localhost:8000/  </h4>
+
+5. <h4> for the admin pannel goto http://localhost:8000/admin </h4>
+
+
+**Note:** The template for the website was taken from https://colorlib.com/wp/template/harbor-lights/
