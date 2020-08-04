@@ -38,9 +38,9 @@ mkvirtualenv <virtual environment name>
 ```
 python manage.py runserver
 ```
-4. <h4> Open your browser and goto the url </h4> http://localhost:8000/ 
+4. <h4> Open your browser and goto the url </h4> [http://localhost:8000/](http://localhost:8000/) 
 
-5. <h4> for the admin pannel goto </h4> http://localhost:8000/admin 
+5. <h4> for the admin pannel goto </h4> [http://localhost:8000/admin](http://localhost:8000/admin) 
 
 
 **Note:** The template for the website was taken from https://colorlib.com/wp/template/harbor-lights/
