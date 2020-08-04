@@ -30,7 +30,7 @@ ___
 
 ## How to  
 1. <h4>Install python</h4>
-https://www.python.org/downloads/
+   https://www.python.org/downloads/
 2. <h4>Create virtual environment</h4> 
 ```
 mkvirtualenv <virtual environment name>
