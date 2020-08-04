@@ -15,9 +15,9 @@
 ___
 ### Screenshots
 
-Check Availability:
+#### Check Availability:
 ![availability check](https://github.com/AnirudhVasudev47/Django/blob/master/Hotel%20website%20Screenshots/Availability%20check.png "Check Room Availbility")
-Room Details(Website):
+#### Room Details(Website):
 ![Room Details Website](https://github.com/AnirudhVasudev47/Django/blob/master/Hotel%20website%20Screenshots/Rooms.png "Room Details(Website)")
 
 The template for the website was taken from https://colorlib.com/wp/template/harbor-lights/
