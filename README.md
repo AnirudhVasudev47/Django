@@ -1,7 +1,7 @@
 # Danjo Hotel Room Reservation 
 
 
-### Features
+## Features
 * <h4>Customer Sign up</h4>
 
    Customer can Sign in and sign up before booking Room
@@ -13,7 +13,7 @@
    Admin has access to everything and modify everything in the database.
    
 ___
-### Screenshots
+## Screenshots
 
 #### Check Availability:
 ![availability check](https://github.com/AnirudhVasudev47/Django/blob/master/Hotel%20website%20Screenshots/Availability%20check.png "Check Room Availbility")
